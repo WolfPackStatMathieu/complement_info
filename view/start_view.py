@@ -18,6 +18,9 @@ class StartView(AbstractView):
                     'Next'
                     , 'Checkbox example'
                     , 'Sign In example'
+                    , 'Affichage Pokemon'
+                    , 'Affichage attaque'
+                    , 'Créer un Pokemon'
 
                 ]
             }
@@ -37,4 +40,7 @@ class StartView(AbstractView):
         elif reponse['choix'] == 'Sign In example':
             from view.sign_in_example import SignInExample
             return SignInExample()
+        elif reponse['choix'] == 'Affichage Pokemon':
+            from view.PokemonListView import PokemonListView
+            return PokemonListView()
 
